@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HeroVideo } from '../components/HeroVideo'
 import { Reveal } from '../components/Reveal'
-import { StatementLines } from '../components/StatementLines'
 import { Typewriter } from '../components/Typewriter'
 import { FAQS } from '../data/faqs'
 
@@ -222,10 +221,12 @@ export function Home() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap split">
           <Reveal className="statement">
-            <StatementLines
-              title={<Typewriter text="Wir schreiben." delay={150} speed={78} />}
-              lead="Sie widmen sich anderweitigen Verpflichtungen."
-            />
+            <p className="huge">
+              <Typewriter text="Wir schreiben." delay={150} speed={78} />
+            </p>
+            <p className="statement-lead">
+              Sie widmen sich anderweitigen Verpflichtungen.
+            </p>
           </Reveal>
 
           <Reveal delay={80} className="prose">
