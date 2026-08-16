@@ -251,12 +251,17 @@ export function Home() {
 
       <section className="section" id="vertrauen">
         <div className="wrap">
-          <div className="section-head">
-            <div>
+          <div className="trust-top">
+            <div className="trust-copy">
               <p className="mono kicker">Vertrauen auf Augenhöhe</p>
               <h2 className="display">
                 Ich stehe zu unserer Dienstleistung mit meinem Namen.
               </h2>
+              <p className="trust-lead">
+                Ihr Name bleibt geheim. Wenn Sie mit uns kommunizieren, kommunizieren Sie
+                direkt mit Elias Gudwis. In unserer Ghostwriting-Agentur geht Kommunikation
+                immer transparent und auf Augenhöhe vonstatten.
+              </p>
               <div className="byline">
                 <span className="monogram" aria-hidden="true">
                   EG
@@ -267,36 +272,33 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <p>
-              Ihr Name bleibt geheim. Wenn Sie mit uns kommunizieren, kommunizieren Sie
-              direkt mit Elias Gudwis. In unserer Ghostwriting-Agentur geht Kommunikation
-              immer transparent und auf Augenhöhe vonstatten.
-            </p>
+
+            <Reveal className="trust-media">
+              <YouTubeEmbed
+                videoId="_iU7KOLTuNQ"
+                title="So kaufen sich Studenten ihren Abschluss – Insiderwissen eines Ghostwriters"
+                poster="/vertrauen-video.jpg"
+                label="Interview"
+                note="ungeskriptet"
+                caption="„So kaufen sich Studenten ihren Abschluss“ – Elias Gudwis bei {ungeskriptet}"
+              />
+            </Reveal>
           </div>
 
-          <Reveal className="trust-video">
-            <YouTubeEmbed
-              videoId="_iU7KOLTuNQ"
-              title="Elias Gudwis – Vertrauen auf Augenhöhe"
-              poster="/vertrauen-video.jpg"
-              label="Video"
-              note="Elias Gudwis"
-              caption="Persönlich vorgestellt: Elias Gudwis"
-            />
-          </Reveal>
+          <div className="trust-expect">
+            <p className="mono kicker expect-intro">Das können Sie erwarten</p>
 
-          <p className="expect-intro">Das können Sie erwarten:</p>
-
-          <div className="expect-list">
-            {EXPECTATIONS.map((item, i) => (
-              <Reveal className="expect" key={item.id} delay={i * 40}>
-                <span className="idx">{item.id}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
-                </div>
-              </Reveal>
-            ))}
+            <div className="expect-list">
+              {EXPECTATIONS.map((item, i) => (
+                <Reveal className="expect" key={item.id} delay={i * 40}>
+                  <span className="idx">{item.id}</span>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
