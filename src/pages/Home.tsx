@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { HeroVideo } from '../components/HeroVideo'
 import { Reveal } from '../components/Reveal'
 import { Typewriter } from '../components/Typewriter'
+import { YouTubeEmbed } from '../components/YouTubeEmbed'
 import { FAQS } from '../data/faqs'
 
 const STEPS = [
@@ -272,6 +273,17 @@ export function Home() {
               immer transparent und auf Augenhöhe vonstatten.
             </p>
           </div>
+
+          <Reveal className="trust-video">
+            <YouTubeEmbed
+              videoId="_iU7KOLTuNQ"
+              title="Elias Gudwis – Vertrauen auf Augenhöhe"
+              poster="/vertrauen-video.jpg"
+              label="Video"
+              note="Elias Gudwis"
+              caption="Persönlich vorgestellt: Elias Gudwis"
+            />
+          </Reveal>
 
           <p className="expect-intro">Das können Sie erwarten:</p>
 
